@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "title": "Introduction to React",
+      "content": "React is a popular JavaScript library for building user interfaces.",
+      "date": "2023-05-01",
+      "tags": ["react", "javascript"]
+    },
+    {
+      "id": 2,
+      "title": "Exploring CSS Flexbox",
+      "content": "CSS Flexbox is a powerful layout module that helps with creating responsive designs.",
+      "date": "2023-06-15",
+      "tags": ["css", "layout"]
+    },
+    {
+      "id": 3,
+      "title": "Async/Await in JavaScript",
+      "content": "Async/Await is a syntax introduced in ES2017 that makes working with asynchronous code much easier.",
+      "date": "2023-07-10",
+      "tags": ["javascript", "async"]
+    }
+  ]
