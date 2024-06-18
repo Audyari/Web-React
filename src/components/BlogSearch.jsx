@@ -4,12 +4,12 @@ import React, { useState, useEffect } from "react";
 import blogData from "../data/blog-data.json";
 import "../styles/blog.css"
 
-
-function Blog() {
+function BlogSearch() {
   console.log("Komponen Blog telah dirender");
   const [semuaPostingan] = useState(blogData);
   const [postinganTerfilter, setPostinganTerfilter] = useState(blogData);
   const [tagsYangDipilih, setTagsYangDipilih] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleFilterTags = (tag) => {
     if (tagsYangDipilih.includes(tag)) {
@@ -20,16 +20,24 @@ function Blog() {
   };
 
   useEffect(() => {
-    if (tagsYangDipilih.length === 0) {
-      setPostinganTerfilter(semuaPostingan);
-    } else {
-      setPostinganTerfilter(
-        semuaPostingan.filter((post) =>
-          tagsYangDipilih.every((tag) => post.tag.includes(tag))
-        )
+    let filteredPosts = semuaPostingan;
+
+    // Filter berdasarkan tags
+    if (tagsYangDipilih.length > 0) {
+      filteredPosts = filteredPosts.filter((post) =>
+        tagsYangDipilih.every((tag) => post.tag.includes(tag))
       );
     }
-  }, [semuaPostingan, tagsYangDipilih]);
+
+    // Filter berdasarkan judul
+    if (searchTerm.trim() !== "") {
+      filteredPosts = filteredPosts.filter((post) =>
+        post.judul.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+
+    setPostinganTerfilter(filteredPosts);
+  }, [semuaPostingan, tagsYangDipilih, searchTerm]);
 
   return (
     <div className="blog-container">
@@ -45,6 +53,12 @@ function Blog() {
             {tag}
           </button>
         ))}
+        <input
+          type="text"
+          placeholder="Cari berdasarkan judul..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
       </div>
       {postinganTerfilter.map((post) => (
         <div key={post.id} className="blog-post">
@@ -62,4 +76,4 @@ function Blog() {
   );
 }
 
-export default Blog;
+export default BlogSearch;

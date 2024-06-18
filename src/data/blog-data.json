@@ -1,23 +1,72 @@
 [
     {
       "id": 1,
-      "title": "Introduction to React",
-      "content": "React is a popular JavaScript library for building user interfaces.",
-      "date": "2023-05-01",
-      "tags": ["react", "javascript"]
+      "judul": "Pengenalan React",
+      "konten": "React adalah pustaka JavaScript populer untuk membangun antarmuka pengguna.",
+      "tanggal": "2023-05-01",
+      "tag": ["react", "javascript"]
     },
     {
       "id": 2,
-      "title": "Exploring CSS Flexbox",
-      "content": "CSS Flexbox is a powerful layout module that helps with creating responsive designs.",
-      "date": "2023-06-15",
-      "tags": ["css", "layout"]
+      "judul": "Menjelajahi CSS Flexbox",
+      "konten": "CSS Flexbox adalah modul tata letak yang kuat yang membantu dengan pembuatan desain responsif.",
+      "tanggal": "2023-06-15",
+      "tag": ["css", "tata letak"]
     },
     {
       "id": 3,
-      "title": "Async/Await in JavaScript",
-      "content": "Async/Await is a syntax introduced in ES2017 that makes working with asynchronous code much easier.",
-      "date": "2023-07-10",
-      "tags": ["javascript", "async"]
+      "judul": "Async/Await di JavaScript",
+      "konten": "Async/Await adalah sintaks yang diperkenalkan di ES2017 yang membuat pengerjaan kode asinkron jauh lebih mudah.",
+      "tanggal": "2023-07-10",
+      "tag": ["javascript", "asinkron"]
+    },
+    {
+      "id": 4,
+      "judul": "Memahami Git dan GitHub",
+      "konten": "Git adalah sistem kontrol versi yang powerful, dan GitHub adalah layanan hosting kode berbasis Git.",
+      "tanggal": "2023-08-01",
+      "tag": ["git", "github"]
+    },
+    {
+      "id": 5,
+      "judul": "Optimasi Kinerja Website dengan Lighthouse",
+      "konten": "Lighthouse adalah alat audit sumber terbuka yang membantu mengoptimalkan kinerja, aksesibilitas, dan praktik terbaik pada website.",
+      "tanggal": "2023-09-15",
+      "tag": ["web performance", "lighthouse"]
+    },
+    {
+      "id": 6,
+      "judul": "Pengenalan Redux untuk State Management",
+      "konten": "Redux adalah pustaka JavaScript untuk mengelola state dalam aplikasi, terutama yang berskala besar.",
+      "tanggal": "2023-10-01",
+      "tag": ["react", "redux", "state management"]
+    },
+    {
+      "id": 7,
+      "judul": "Unit Testing dengan Jest dan Enzyme",
+      "konten": "Jest adalah framework pengujian JavaScript, dan Enzyme adalah pustaka pengujian komponen React.",
+      "tanggal": "2023-11-10",
+      "tag": ["testing", "jest", "enzyme"]
+    },
+    {
+      "id": 8,
+      "judul": "Membuat Aplikasi PWA dengan React",
+      "konten": "PWA (Progressive Web App) adalah aplikasi web yang dapat bekerja offline dan memiliki fitur-fitur seperti aplikasi native.",
+      "tanggal": "2023-12-01",
+      "tag": ["react", "pwa"]
+    },
+    {
+      "id": 9,
+      "judul": "Pengenalan TypeScript untuk JavaScript",
+      "konten": "TypeScript adalah superset dari JavaScript yang menambahkan sistem tipe statis dan fitur lainnya.",
+      "tanggal": "2024-01-15",
+      "tag": ["typescript", "javascript"]
+    },
+    {
+      "id": 10,
+      "judul": "Memahami Konsep Functional Programming",
+      "konten": "Functional Programming adalah paradigma pemrograman di mana fungsi adalah entitas utama dan data tidak dapat diubah.",
+      "tanggal": "2024-02-01",
+      "tag": ["functional programming", "javascript"]
     }
   ]
