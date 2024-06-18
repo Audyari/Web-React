@@ -1,11 +1,15 @@
 import Article from "./components/Article";
+import MyComponent from "./components/MyComponent";
+import GreetUser from "./components/GreetUser";
+import GreetUsersArray from "./components/GreetUsersArray";
 
 function App() {
   return (
     <div>
       <Article title="Judul Artikel 1" content="Ini adalah konten artikel 1." />
-      <Article title="Judul Artikel 2" content="Ini adalah konten artikel 2." />
-      <Article title="Judul Artikel 3" content="Ini adalah konten artikel 3." />
+      <MyComponent />
+      <GreetUser name="Audyari W" />
+      <GreetUsersArray names={['John', 'Jane', 'Bob']} />
     </div>
   );
 }
