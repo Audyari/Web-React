@@ -1,6 +1,8 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import '../styles/ChildComponent.css'; // Import file CSS
 
+// eslint-disable-next-line react/prop-types
 const ChildComponent = ({ onMessageChange }) => {
   const [childMessage, setChildMessage] = useState('');
 

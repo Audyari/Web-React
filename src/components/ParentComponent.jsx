@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import ChildComponent from './ChildComponent';
 import '../styles/ParentComponent.css'; // Import file CSS
