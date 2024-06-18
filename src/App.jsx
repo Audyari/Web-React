@@ -1,11 +1,13 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import BlogSearch from "./components/BlogSearch";
+import ParentComponent from "./components/ParentComponent";
+
 
 function App() {
   return (
     <div>
-      <BlogSearch />
+      <h1>My React App</h1>
+      <ParentComponent />
     </div>
   );
 }
