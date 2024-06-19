@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import MyButton from "./components/MyButton";
+import MyComponent from "./components/MyComponent";
+
 
 function App() {
   return (
     <div>
-      <MyButton message="Halo, dunia!" />
-      <MyButton />
+     <MyComponent />
     </div>
   );
 }

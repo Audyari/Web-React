@@ -1,12 +1,25 @@
+// eslint-disable-next-line no-unused-vars
+import React, { Component } from 'react';
 
+class MyComponent extends Component {
+  state = {
+    count: 0
+  };
 
-function MyComponent() {
+  handleClick = () => {
+    this.setState(prevState => ({
+      count: prevState.count + 1
+    }));
+  };
+
+  render() {
     return (
       <div>
-        <h1>Hello, World!</h1>
-        <p>This is a React component.</p>
+        <p>Anda telah mengklik tombol sebanyak {this.state.count} kali.</p>
+        <button onClick={this.handleClick}>Klik saya</button>
       </div>
     );
   }
+}
 
-  export default MyComponent;
+export default MyComponent;
