@@ -1,41 +1,22 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/display-name */
+/* eslint-disable no-unused-vars */
 import React from 'react';
 
-// Komponen pembungkus
-function withAdditionalProps(WrappedComponent) {
-  
-  return class extends React.Component {
-    render() {
-      return (
-        <WrappedComponent
-          additionalProp1="Ini adalah props tambahan 1"
-          additionalProp2="Ini adalah props tambahan 2"
-          {...this.props}
-        />
-      );
-    }
-  };
-}
-
-// Komponen yang akan dibungkus
-function MyComponent(props) {
-  return (
-    <div>
-      <p>{props.additionalProp1}</p>
-      <p>{props.additionalProp2}</p>
-      <p>{props.message}</p>
-    </div>
-  );
-}
-
-// Menggunakan komponen pembungkus
-const EnhancedMyComponent = withAdditionalProps(MyComponent);
-
 function App() {
+  const isLoggedIn = true; // Anggap user sudah login
+
   return (
     <div>
-      <EnhancedMyComponent message="Halo, Dunia!" />
+      {isLoggedIn ? (
+        <div>
+          <h1>Selamat datang, Pengguna!</h1>
+          <p>Anda telah login.</p>
+        </div>
+      ) : (
+        <div>
+          <h1>Silakan login</h1>
+          <p>Anda belum login.</p>
+        </div>
+      )}
     </div>
   );
 }
