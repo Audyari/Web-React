@@ -5,6 +5,7 @@ import MyButton from "./components/MyButton";
 function App() {
   return (
     <div>
+      <MyButton message="Halo, dunia!" />
       <MyButton />
     </div>
   );

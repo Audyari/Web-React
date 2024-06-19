@@ -1,14 +1,17 @@
-// eslint-disable-next-line no-unused-vars
+/* eslint-disable no-unused-vars */
 import React from 'react';
 
-function MyButton() {
-    const handleClick = () => {
-      console.log('Tombol diklik!');
-    };
-  
-    return (
-      <button onClick={handleClick}>Klik saya</button>
-    );
-  }
+// eslint-disable-next-line react/prop-types
+function MyButton({ message }) {
+  const handleClick = (event) => {
+    console.log(`Tombol diklik dengan pesan: ${message}`);
+  };
 
-  export default MyButton;
+  return (
+    <button onClick={(event) => handleClick(event, message)}>
+      Klik saya
+    </button>
+  );
+}
+
+export default MyButton;
