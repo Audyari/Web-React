@@ -10,6 +10,7 @@ function BlogSearch() {
   const [postinganTerfilter, setPostinganTerfilter] = useState(blogData);
   const [tagsYangDipilih, setTagsYangDipilih] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [totalPostingan, setTotalPostingan] = useState(0); // Tambahkan state untuk total postingan
 
   const handleFilterTags = (tag) => {
     if (tagsYangDipilih.includes(tag)) {
@@ -37,6 +38,7 @@ function BlogSearch() {
     }
 
     setPostinganTerfilter(filteredPosts);
+    setTotalPostingan(filteredPosts.length); // Perbarui state total postingan
   }, [semuaPostingan, tagsYangDipilih, searchTerm]);
 
   return (
@@ -60,6 +62,7 @@ function BlogSearch() {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </div>
+      <p>Total Postingan: {totalPostingan}</p> {/* Tampilkan total postingan */}
       {postinganTerfilter.map((post) => (
         <div key={post.id} className="blog-post">
           <h2>{post.judul}</h2>
