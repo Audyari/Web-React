@@ -2,20 +2,18 @@
 import React from 'react';
 
 function Example() {
-  const count = 2;
+  const user = {
+    name: 'Alice',
+    age: 25,
+    email: null,
+  };
 
   return (
     <div>
-      <p>
-        Anda telah mengklik {count} kali.{' '}
-        {count > 0 ? (
-          <button onClick={() => console.log('Tombol diklik')}>
-            Klik saya lagi
-          </button>
-        ) : (
-          <p>Tombol tidak akan ditampilkan jika jumlah klik 0.</p>
-        )}
-      </p>
+      <h2>Informasi Pengguna</h2>
+      <p>Nama: {user.name}</p>
+      <p>Usia: {user.age}</p>
+      {user.email && <p>Email: {user.email}</p>}
     </div>
   );
 }
