@@ -1,17 +1,18 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function MyComponent() {
   const [count, setCount] = useState(0);
 
-  const handleClick = () => {
-    setCount(prevCount => prevCount + 1);
-  };
+  useEffect(() => {
+    // Efek yang akan dijalankan saat komponen di-render
+    document.title = `Anda mengklik ${count} kali`;
+  }, [count]); // Dependency array, efek akan dijalankan saat count berubah
 
   return (
     <div>
-      <p>Anda telah mengklik tombol sebanyak {count} kali.</p>
-      <button onClick={handleClick}>Klik saya</button>
+      <p>Anda mengklik {count} kali</p>
+      <button onClick={() => setCount(count + 1)}>Klik saya</button>
     </div>
   );
 }
