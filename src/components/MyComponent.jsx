@@ -1,52 +1,14 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 function MyComponent() {
-  const [count, setCount] = useState(0);
-  const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-
-  // Efek yang terpicu saat komponen dimuat
-  useEffect(() => {
-    console.log('Komponen dimuat');
-  }, []);
-
-  // Efek yang terpicu saat nilai count berubah
-  useEffect(() => {
-    console.log(`Count saat ini: ${count}`);
-  }, [count]);
-
-  // Efek yang terpicu saat data berubah
-  useEffect(() => {
-    console.log(`Data saat ini: ${data}`);
-  }, [data]);
-
-  // Efek yang terpicu saat isLoading berubah
-  useEffect(() => {
-    if (isLoading) {
-      console.log('Sedang memuat data...');
-    } else {
-      console.log('Selesai memuat data.');
-    }
-  }, [isLoading]);
-
-  const handleClick = () => {
-    setCount(count + 1);
-    setData([...data, 'Baru']);
-    setIsLoading(true);
-
-    // Simulasi pengambilan data dari server
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  };
-
   return (
-    <div>
-      <p>Count: {count}</p>
-      <p>Data: {data.join(', ')}</p>
-      <p>{isLoading ? 'Sedang memuat data...' : 'Selesai memuat data.'}</p>
-      <button onClick={handleClick}>Tambah Count dan Data</button>
+    <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+      <h1 className="text-2xl font-bold mb-4">Welcome to my component</h1>
+      <p className="text-gray-700 mb-2">This is some sample content.</p>
+      <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
+        Click me
+      </button>
     </div>
   );
 }
