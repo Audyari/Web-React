@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import SimpleExample from "./components/SimpleExample";
+import MyComponent from "./components/MyComponent";
 
 
 function App() {
   return (
     <div>
-      <SimpleExample/>
+      <MyComponent/>
     </div>
   );
 }
